@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function GallerySection() {
   return (
-    <section className="bg-[#0B0B0B] text-[#F5E9D8] px-8 md:px-20 py-28">
+    <section id="gallery" className="bg-[#0B0B0B] text-[#F5E9D8] px-8 md:px-20 py-28">
 
       <div className="mb-14">
 
