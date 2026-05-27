@@ -22,7 +22,16 @@ export default function ReservePage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0B0B0B] text-[#F5E9D8] flex flex-col items-center justify-center px-8 text-center relative overflow-hidden">
+    <main className="min-h-screen bg-[#0B0B0B] text-[#F5E9D8] flex flex-col items-center justify-center px-8 py-20 text-center relative overflow-hidden">
+
+      {/* DESKTOP BACK BUTTON */}
+
+      <a
+        href="/"
+        className="hidden md:block absolute top-10 left-8 border border-white/10 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:border-[#FF7A00] hover:text-[#FF7A00] transition-all z-50"
+      >
+        ← Back Home
+      </a>
 
       {/* SUCCESS OVERLAY */}
 
@@ -57,17 +66,11 @@ export default function ReservePage() {
 
       {/* MAIN CONTENT */}
 
-<a
-  href="/"
-className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 border border-white/10 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:border-[#FF7A00] hover:text-[#FF7A00] transition-all z-50"
->
-  ← Back Home
-</a>
       <p className="uppercase tracking-[0.3em] text-[#FF7A00] text-sm mb-4">
         Reservation Experience
       </p>
 
-      <h1 className="text-6xl md:text-8xl font-black leading-none mb-6">
+      <h1 className="text-5xl md:text-8xl font-black leading-[0.9] mb-6 tracking-tight">
         BOOK
         <br />
         YOUR
@@ -75,11 +78,13 @@ className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 
         TABLE
       </h1>
 
-      <p className="max-w-xl text-[#F5E9D8]/70 text-lg leading-relaxed mb-10">
+      <p className="max-w-xl text-[#F5E9D8]/70 text-lg leading-relaxed mb-12">
         This fictional reservation experience was designed for portfolio purposes.
       </p>
 
-      <div className="bg-[#111111] border border-white/5 rounded-[2rem] p-10 w-full max-w-xl">
+      {/* FORM CARD */}
+
+      <div className="bg-[#111111] border border-white/5 rounded-[2rem] p-6 md:p-10 w-full max-w-xl">
 
         <div className="grid gap-5">
 
@@ -88,7 +93,7 @@ className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 
             placeholder="Your Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-[#FF7A00]"
+            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-5 outline-none focus:border-[#FF7A00] transition-all"
           />
 
           <input
@@ -96,14 +101,14 @@ className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 
             placeholder="Email Address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-[#FF7A00]"
+            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-5 outline-none focus:border-[#FF7A00] transition-all"
           />
 
           <input
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-[#FF7A00]"
+            className="bg-[#1A1A1A] border border-white/10 rounded-xl px-5 py-5 outline-none focus:border-[#FF7A00] transition-all"
           />
 
           {error && (
@@ -114,7 +119,7 @@ className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 
 
           <button
             onClick={handleReservation}
-            className="bg-[#FF7A00] text-black py-4 rounded-xl font-bold hover:scale-[1.02] transition-transform"
+            className="bg-[#FF7A00] text-black py-5 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform"
           >
             Confirm Reservation
           </button>
@@ -122,6 +127,15 @@ className="absolute top-10 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 
         </div>
 
       </div>
+
+      {/* MOBILE BACK BUTTON */}
+
+      <a
+        href="/"
+        className="md:hidden mt-10 border border-white/10 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:border-[#FF7A00] hover:text-[#FF7A00] transition-all"
+      >
+        ← Back Home
+      </a>
 
     </main>
   );
