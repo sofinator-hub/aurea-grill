@@ -59,7 +59,7 @@ export default function ReservePage() {
 
 <a
   href="/"
-  className="absolute top-8 left-8 border border-white/10 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:border-[#FF7A00] hover:text-[#FF7A00] transition-all"
+className="absolute top-6 left-1/2 -translate-x-1/2 md:left-8 md:translate-x-0 border border-white/10 px-6 py-3 rounded-full text-sm uppercase tracking-widest hover:border-[#FF7A00] hover:text-[#FF7A00] transition-all z-50"
 >
   ← Back Home
 </a>
